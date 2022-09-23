@@ -1,0 +1,26 @@
+<section class="seccion">
+    <article>
+        <blockquote>
+            <h1>Ingresar Usuarios</h1>
+            <aside>
+                <i class="fa-solid fa-circle-user"></i>
+            </aside>
+            <br>
+            <input class="controls" type="text" id="nombre" placeholder="INGRESA TU NOMBRE(S)" [formControl]="padreForm">
+            <br>
+            <br>
+            <input class="controls" type="text" id="apellido" placeholder="INGRESA TUS APELLIDOS" [formControl]="padreForm2">
+            <br>
+            <br>
+            <input class="controls" type="number" id="edad" placeholder="INGRESA TU EDAD" [formControl]="padreForm3">
+            <br>
+            <br>
+            <input class="controls" type="email" id="correo" placeholder="INGRESA TU CORREO" [formControl]="padreForm4">
+            <br>
+            <br>
+            <button class="controls_2" type="button" name="Enviar" (click)="guardar()">
+                Guardar<span><i class="fa-solid fa-floppy-disk"></i></span>
+            </button>
+        </blockquote>
+    </article>
+</section>

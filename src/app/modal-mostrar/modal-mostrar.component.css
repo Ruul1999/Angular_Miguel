@@ -1,0 +1,76 @@
+.tabla2
+{
+    font-size: 20px;
+    padding: 5px;
+    display: inline-block;
+}
+.boton
+{
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    background: #1A2849;
+    padding: 5px;
+    font-size: 20px;
+}
+.modal
+{
+    position: fixed;
+    transition: all 500ms ease;
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.contenedor
+{
+    background: #fff;
+}
+.contenedor header
+{
+    font-size: 20px;
+    padding: 10px;
+    background: #34EBE9;
+}
+.contenedor label
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.contenido p
+{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal3
+{
+    width: 99%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal3
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    opacity: 0; 
+    visibility: hidden;
+}
+.contenedor3
+{
+    margin: auto;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transition: all 500ms ease;
+    position: relative;
+    transform: translateY(-30%);
+}
