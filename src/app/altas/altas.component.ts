@@ -115,7 +115,10 @@ export class AltasComponent implements OnChanges{
 
         if(esValido == true)
         {
-          permitir_guardar = true;
+          if(this.edad >= 0)
+          {
+            permitir_guardar = true;
+          }
         }
         else
         {
@@ -130,7 +133,7 @@ export class AltasComponent implements OnChanges{
       if(permitir_guardar == true)
       {
         this.id++;
-        var estructura = {id: this.id, nombre: this.nombre, apellido: this.apellido, edad: this.edad, correo: this.correo, permitir: permitir_guardar};
+        var estructura = {id: this.id, nombre: this.nombre, apellido: this.apellido, edad: this.edad, correo: this.correo, permitir: false};
         this.personas.push(estructura)
         this.persona_.emit(this.personas);
         this.padreForm.reset();

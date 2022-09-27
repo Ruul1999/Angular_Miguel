@@ -1,18 +1,29 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+
 import { Persona } from '../altas/altas.component';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-paginacion',
   templateUrl: './paginacion.component.html',
   styleUrls: ['./paginacion.component.css']
 })
-export class PaginacionComponent{
+export class PaginacionComponent implements OnInit{
   @Input() arreglo_personas: Persona[] = [];
   arreglo_5_usuarios: Persona[]= [];
   @Output()
   arreglo_5_usuarios_: EventEmitter<Persona[]> = new EventEmitter<Persona[]>();
-  constructor() { }
+
+  constructor(private comunicacion: AppComponent) { }
+  ngOnInit(): void {
+    this.comunicacion.enviar_arreglo_observable.subscribe(personas =>{
+      this.arreglo_personas = personas;
+      console.log("---------")
+      console.log(this.arreglo_personas);
+      console.log("---------")
+      this.botonestabla(this.posicion_tabla_principal);
+    })
+  }
 
   arreglo_busqueda: any[] = [];
   cantidad: string = "TOTAL USUARIOS: 0";

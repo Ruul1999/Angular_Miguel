@@ -15,6 +15,15 @@ export class TablasComponent implements OnChanges{
     console.log("si_tablas")
   }
 
+  palomita = false;
+  palomitas(valor: number)
+  {
+    this.palomita = this.personas[valor].permitir;
+    this.personas[valor].permitir = !this.palomita;
+    console.log("palomitas:")
+    console.log(this.personas);
+    console.log("---------")
+  }
   usuarios(e: Persona[])
   {
     this.arreglo_5_usuarios = e;
